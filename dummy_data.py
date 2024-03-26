@@ -1,19 +1,14 @@
-import csv
-import random
+import pandas as pd
+import plotly.express as px
 
-# Parameters
-num_builds = 50  # Number of builds to simulate
-min_time = 5     # Minimum build time in minutes
-max_time = 20    # Maximum build time in minutes
-csv_file_path = 'build_times.csv'  # Output CSV file path
+# Sample data
+df = pd.DataFrame({
+    "Build Number": [1, 2, 3, 4, 5],
+    "Build Time (min)": [10, 15, 14, 20, 12]
+})
 
-# Generate random build times
-with open(csv_file_path, mode='w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(['BuildNumber', 'BuildTime'])  # Header
+# Generate a line chart
+fig = px.line(df, x="Build Number", y="Build Time (min)", title="Build Time Trend")
 
-    for build_number in range(1, num_builds + 1):
-        build_time = random.randint(min_time, max_time)
-        writer.writerow([build_number, build_time])
-
-print(f'Dummy data generated in {csv_file_path}')
+# Save the figure as an HTML file
+fig.write_html("build_time_report.html")
