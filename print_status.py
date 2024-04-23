@@ -3,7 +3,7 @@ import random
 def main():
     raise Exception("Raised")
     # List of possible outputs
-    outputs = ["SUCCESS", "WARNING", "ERROR"]
+    outputs = ["OK", "WARNING - Pipeline 1 exceeded the time limit", "ERROR - Pipeline 1,2,3,4 exceeded the time limit"]
     
     # Randomly choose one output
     selected_output = random.choice(outputs)
