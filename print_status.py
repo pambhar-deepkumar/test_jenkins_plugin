@@ -1,8 +1,7 @@
 import random
 
 def main():
-    raise Exception("Raised")
-    # List of possible outputs
+    # SAmple List of possible outputs
     outputs = ["OK", "WARNING - Pipeline 1 exceeded the time limit", "ERROR - Pipeline 1,2,3,4 exceeded the time limit"]
     
     # Randomly choose one output
