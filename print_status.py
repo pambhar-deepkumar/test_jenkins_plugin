@@ -6,7 +6,6 @@ def main():
     
     # Randomly choose one output
     selected_output = random.choice(outputs)
-    raise 
     # Print the selected output
     print(selected_output)
 
